@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fancify Shamcify</title>
+
+		<!-- link to your script file here -->
+		<script src="fancifymytext.js"></script>
+	</head>
+
+	<body>
+		<h1>Fancify my Text</h1>
+		<textarea id="someText" name="someText" rows="4" cols="30"></textarea>
+
+		<!-- Your UI controls go here -->
+		
+		<div id="Fancify" style="flex: auto;">
+			<br>
+			<input id="Bigger" type="Submit" value="Bigger" onclick="kelly()">
+
+			<span style="display: inline-block;">
+				<input type="radio" id="Shmancy" name="Fancify" value="fancy" onclick="fancifyText()">
+				<label for="fancy">Fancy Shmancy!</label>
+				<br>
+				<input type="radio" id="Shmancy" name="Fancify" value="boring" onclick="boringText()">
+				<label for="boring">Boring Betty :(</label>
+			</span>	  
+		</div>
+		<br>
+		<div>
+			<input id="Moo" type="Submit" value="Moo" onclick="Mooify()">
+		</div>
+
+		<script src="fancifymytext.js"></script>
+	</body>
+</html>

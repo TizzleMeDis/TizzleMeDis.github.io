@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Anthony">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Need the time?</title>
+        <link rel="stylesheet" href="clock.css">
+    </head>
+
+    <body>
+
+        <header>
+                    <!-- Add header information here -->
+
+            <h1>Here is a clock</h1>
+            <h2>Displays a javaScript ran clock using your system.</h2>
+
+                <!-- link to your script file here -->
+            <script src="clock.js"></script>
+        </header>
+
+        <main>
+                  <div>
+                               <!-- Add your information here -->
+                        <label>Start the clock with this button</label>
+                        <input id="start_clock" type="Submit" value="try it" onclick="startTimer()"/>
+                        <p id="time">The time is....</p>
+                  </div>
+
+                   <section>
+                               <!-- Add your information here -->
+
+                        <div class="clock">
+                        <div class="wrap">
+                            <span class="hour"></span>
+                            <span class="minute"></span>
+                            <span class="second"></span>
+                            <span class="dot"></span>
+                        </div>
+                        </div>
+                        
+                   </section>
+        </main>
+
+        <footer>
+                 <!-- Add footer information here -->
+        </footer>
+</body>

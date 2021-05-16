@@ -1,7 +1,9 @@
+var timer, c;
+
 function startTimer() {
     var inc = 1000;
-    var timer = setInterval(timingFunction, 1000);
-    const c = setInterval(clock, inc);
+    timer = setInterval(timingFunction, 1000);
+    c = setInterval(clock, inc);
     setTimeout(timer, 3000);
     setTimeout(c, 3000);
     clock();
@@ -28,4 +30,7 @@ function clock() {
   document.querySelector('.second').style.transform = `rotate(${second}deg)`
 }
 
-
+function stopTimer() {
+    clearInterval(timer);
+    clearInterval(c);
+}

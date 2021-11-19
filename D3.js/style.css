@@ -1,0 +1,38 @@
+body{
+	background-color:#28a745; 
+	color:black;
+	padding-top: 20px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+
+a {
+	color:blue;
+}
+
+a:hover{
+	font-size: 1.1em;
+	opacity: .6;
+}
+
+footer{
+	padding-top: 1em;
+	padding-bottom: 2em;
+}
+.accent-color {
+	background: rgb(38, 115, 77, 0.7);
+	margin-left: 0; 
+	margin-right: 0
+	text-size: 3em;
+	text-align:center;
+	justify-content: center;
+}
+
+.center {
+	text-align:center;
+}

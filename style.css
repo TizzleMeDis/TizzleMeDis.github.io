@@ -1,0 +1,72 @@
+body{
+	background-color: #5dc68c;
+	color:#EDF5E1;
+	padding-top: 20px;
+}
+
+a {
+	color:#05386B;
+}
+
+a:hover{
+	font-size: 1.1em;
+	opacity: .6;
+	animation-name: bold_tab;
+	animation-duration: 0.2s;
+}
+
+
+
+footer{
+	padding-top: 1em;
+	padding-bottom: 2em;
+}
+
+li{
+	display: span;
+}
+li:hover {
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 10%;
+	border-color: grey;
+
+	animation-name: bold_tab;
+	animation-duration: 0.2s;
+}
+
+@keyframes bold_tab {
+	from {background-color:#5dc68c
+;}
+	to {background-color: rgba(255,255,255,0.1);}
+
+#menuBar{
+	width: 100%;
+	position: absolute;
+    right: 15px;
+ 
+ 	background-color:#55b480; 
+
+	margin:0px;
+	border-bottom: 2px solid #5dc68c;
+	padding: 15px 15px 15px 15px; 
+}
+
+.sticky{
+	color: #EDF5E1;
+	box-shadow: 3px 3px 5px #8EE4AF;
+}
+.sticky a{
+	color: #EDF5E1;
+	animation-name: bold_link;
+	animation-duration: 0.2s;
+}
+
+@keyframes bold_link {
+	from {background-color:#5dc68c;}
+	to {background-color: rgba(255,255,255,0.1);}
+}
+
+.center {
+	text-align:center;
+	justify-content: center;
+}

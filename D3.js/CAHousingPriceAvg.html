@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="HTML, CSS, JavaScript, observablehq, D3.js">
+  	<meta name="author" content="Kenny Nguyen, Mei, Anthony Tisdale">
+	<title>Average Housing Price</title>
+</head>
+
+<body>
+
+	<div id="banner">
+		<header>
+			<h1>Housing price scubber</h1>
+		</header>
+		<h6>This is a span of the house prices over the last 20 years. You can scroll to see the prices fluxuate overtime.</h6>
+	</div>
+
+	<section>
+
+		<p>You can scroll to change the yearly average prices.</p>
+	  	<div id="observablehq-viewof-keyframe-c13324a3"></div>
+		<div id="observablehq-chart-c13324a3"></div>
+		<div id="observablehq-keyframes-c13324a3"></div>
+		<div id="observablehq-data-c13324a3"></div>
+		<div id="observablehq-bars-c13324a3"></div>
+		<div id="observablehq-labels-c13324a3"></div>
+		<div id="observablehq-axis-c13324a3"></div>
+		<div id="observablehq-ticker-c13324a3"></div>
+		<div id="observablehq-duration-c13324a3"></div>
+		<p>Credit: <a href="https://observablehq.com/@kennynguyen/bar-chart-race-with-scrubber">Bar Chart Race with Scrubber by kennynguyen</a></p>
+	</section>
+
+	<script type="module">
+		import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+		import define from "https://api.observablehq.com/@kennynguyen/bar-chart-race-with-scrubber.js?v=3";
+		new Runtime().module(define, name => {
+		  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-c13324a3"));
+		  if (name === "data") return new Inspector(document.querySelector("#observablehq-data-c13324a3"));
+		  if (name === "bars") return new Inspector(document.querySelector("#observablehq-bars-c13324a3"));
+		  if (name === "labels") return new Inspector(document.querySelector("#observablehq-labels-c13324a3"));
+		  if (name === "axis") return new Inspector(document.querySelector("#observablehq-axis-c13324a3"));
+		  if (name === "ticker") return new Inspector(document.querySelector("#observablehq-ticker-c13324a3"));
+		  if (name === "keyframes") return new Inspector(document.querySelector("#observablehq-keyframes-c13324a3"));
+		  if (name === "viewof keyframe") return new Inspector(document.querySelector("#observablehq-viewof-keyframe-c13324a3"));
+		  return ["update","names","rank","datevalues","color"].includes(name);
+		});
+	</script>
+	<script type="module" src="CAHousingPriceAvg.js"></script>
+</body>
+</html>

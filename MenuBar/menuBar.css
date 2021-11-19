@@ -1,0 +1,89 @@
+#menuBar{
+	display:block;
+}
+
+.sticky{
+	width: 100%;
+}
+
+.template{
+    direction: rtl;
+
+	color:white; 
+	background-color:#24170a; 
+	box-shadow: 3px 3px 5px black;
+
+	margin:0px;
+	border-bottom: 2px solid black;
+	padding: 15px 15px 15px 15px; 
+}
+
+.welcome-text {
+	justify-content: center;
+	text-align: center;
+	width: auto;
+	height: auto;
+	padding-top: 170px;
+}
+
+ul > li:hover {
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 10%;
+	border-color: grey;
+
+	animation-name: bold_tab;
+	animation-duration: 0.2s;
+}
+
+@keyframes bold_tab {
+	from {background-color:#24170a;}
+	to {background-color: rgba(255,255,255,0.1);}
+}
+
+body {
+	color:white;
+	background-color:#6b6b5b;
+	margin:0px;
+	text-shadow: 2px 2px 2px black;
+}
+
+
+li {
+	display:inline;
+	padding:1em;
+}
+
+#change-view{
+	display: flex;
+	flex-direction: row; 
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+	width: auto;
+
+
+}
+
+#change-view input{
+	background-color: #24170a;
+	color:white;
+	margin:1em;
+	padding: 1.5em; 
+	box-shadow: 3px 3px 5px black;
+	justify-content: center;
+	text-align: center;
+	border-radius: 20%;
+}
+
+#change-view input:hover{
+	background-color: rgba(80,51,22,0.2);
+	border-color: grey;
+
+	animation: bold_tab2;
+	animation-duration:0.4s;
+}
+
+@keyframes bold_tab2 {
+	from {background-color:#24170a;}
+	to {background-color: rgba(80,51,22,0.2);}
+}

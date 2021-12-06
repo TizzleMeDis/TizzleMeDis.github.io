@@ -10,39 +10,55 @@
 		<title>Anthony's Website</title>
 
 		<link rel="stylesheet" href="style.css">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
 	</head>
 
-	<body>		
-		<header id="menuBar">
-			<div class="sticky">
-				<a href="#">Home</a>
-				<a href="#">Projects</a>
-				<a href="#">Contact</a>
-				<a href="#">Git Hub</a>
+	<body>	
+
+		<header id="menu-bar">
+			<div class="header-bar">
+				<a id="header-link" href="https://github.com/TizzleMeDis/"  data-toggle="tooltip" title="Github">
+					<i class="fa fa-github"></i>
+				</a>
+				<a id="header-link" href="#" data-toggle="tooltip" title="Email">
+					<i class="fa fa-envelope"></i>
+				</a>
+				<a id="header-link" href="#" data-toggle="tooltip" title="Projects">
+					<i class="fa fa-code-fork"></i>
+				</a>
+				<a id="header-link" href="#" data-toggle="tooltip" title="Home">
+					<i class="fa fa-home"></i>
+				</a>
 			</div>
 		</header>
 
-		<h1 style="text-align: center;">Anthony Tisdale</h1>
-		<h3>About me</h3>
-
 		<main>
+		<br>
+		<h1 class="center">Anthony Tisdale</h1>
 			<article>
-				<section>
-					<h3>Welcome to my page. This is a demonstration of my skills as a programmer and if you would like to see more just look below. I have all the information to my contact and github repositories.</h3>
+				<section class="container">
+					<h3 class="indent">About me:</h3>
+					<h3>Welcome to my page. This is a demonstration some skills I gained as a programmer and if you would like to see more just look below. I have all the information to my contact and github repositories.</h3>
 
 					<p><strong>A little about me: I am an aspiring developer that has knowledge of front end/back end development. I have participated in a coding event and love learning new technologies to help my craft.</strong></p>
 				</section>
 
-				<div>
+
+				<div class="container" style="width: 50%;">
 					<p><strong>Here is a list of assignments throughout my coding years. </strong></p>
-					<p><a href="D3.js/CAHousingPriceAvg.html">Observable pg.</a> chart diagram of California housing prices</p>
+					<p><a href="D3.js/Assignment3/CAHousingPriceAvg.html">Observable pg.</a> chart diagram of California housing prices</p>
 					<p><a href="textModifier/fancifymytext.html">Text Changer</a> where you can see text modifications with javaScript</p>
 					<p><a href="TimingClock/clock.html">Click Me</a> A timing mechanism that shows a clock using javaScript</p>
 				</div>
 			</article>
-		</main>
-		<footer>
+		
+		<footer class="container">
 			<p><strong>I learned a lot about HTML5, CSS3, BootStrap, JavaScript, and Python. It's been a long road but still pushing the boundaries of my knowledge. If and questions send me an invite on linkedIn or github.</strong></p>
 		</footer>
+
+		</main>
 	</body>
 </html>

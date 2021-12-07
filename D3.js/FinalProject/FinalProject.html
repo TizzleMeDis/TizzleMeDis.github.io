@@ -3,20 +3,18 @@
 <head>
 	<title>Final Project</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="FinalProject.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
 	<header>
+		<h2>Are California House Prices Increasing Through the Years?</h2>
 	</header>
-
-	<h2>Are California House Prices Increasing Through the Years?</h2>
-
-
 	<section id="old-visual">
 			<h4>The Top Cities of Highest Average Price of Houses Sold in California Throughout the Years</h4>
-
-			<div style="text-align: center; margin: auto;">
-				<div style="padding-left:100px; padding-right: 100px;">
+			<div class="container">
+				<div class="chart">
 					<div id="observablehq-viewof-keyframe-aa94e202"></div>
 					<div id="observablehq-chart-aa94e202"></div>
 				
@@ -32,33 +30,31 @@
 				</script>
 				<hr />	
 				</div>
-				<br />
-				<br />
-
-		
 			</div>
 
 			<h4>Description:</h4>
 			<article>This visual is a Bar Chart Race that displays the top 12 cities with the highest average house price sold of that certain year ranging from 2000-2020. There is also a scrubber on the top of the visual that allows the user to switch from year to year and compare the years. Using this graph, it allows the user to explore certain trends that are happening in the California house market. As well as exploring trends, it allows the user to determine which city is best for them price wise to find a house. It also brings the question of why certain cities cost more to live in.</article>
+			<hr />
 	</section>
 
 	<section id="static-visual">
-			<h4>Picture of Static Visual (Title already included):</h4>
-
-			<div style="text-align: center;">
-				<img src="img/CSC 173 Final Project Static Visual.png" alt="Static chart visual" style="width: 80%; height: 500px;" />
+			<h4>Static Visual</h4>
+			<div class="container">
+				<div class="chart">
+					<img src="img/CSC 173 Final Project Static Visual.png" alt="Static chart visual" style="width: 80%; height: 500px;" />
+				</div>
 			</div>
 
 			<h4>Description of Static Visual:</h4>
 			<article> This visual is a line graph that displays the top five most populated cities from our data and it shows a timeline of their average house prices from 2000 to 2020. The five cities consist of Los Angeles, Sacramento, San Diego, San Francisco, and San Jose. We determined that these were the top five cities based on how many houses were purchased in that area. Based on this visual, the user can see from the year 2000 to 2006 there has been a steady increase. However, during 2007-2010 there was a drop in house prices which could have been caused by factors such as the 2008 financial crisis. But once we get to 2010s, we see that prices go back up into new highs for all five cities. Using this visual, it emphasizes that the California House market has indeed increased since the year 2000. But it seems to follow a pattern of increasing at first, then a price drop, to then again increasing but to a new high. Based on this visual, many people looking for houses can determine when is the best time to purchase a home in California.</article>
+			<hr />
 	</section>
 
-	<section style="padding: 30px;">
-
-	<div style="text-align: center; margin: auto;">
-		<div style="padding-left:100px; padding-right: 100px;">
-		
-			<h3>Interactive Bubble chart of the top 5 expensive cities.</h3>
+	<section id="interactive-visual">
+	
+	<h3>Interactive Bubble chart of the top 5 expensive cities.</h3>
+	<div class="container">
+		<div class="chart">
 			<div id="observablehq-viewof-slider-a9e84cbe"></div>
 			<div id="observablehq-chart-a9e84cbe"></div>
 			<p>Credit: <a href="https://observablehq.com/@8382af20acb6450b/bubble-chart-of-housing-prices">Bubble chart of Housing prices by Anthony T</a></p>
@@ -75,11 +71,13 @@
 		</div>
 	</div>
 
-	<h4>Description of Interactive Visual:</h4>
-			<article> This bubble chart represents the housing markets of the 5 top selling houses in California. The charts rank which city has the highest and displays the size based on the year of the housing information. You can slide through the years to get a visual of which cities were the most expensive to live in. As above it was stated of the housing crash which shows a drop in prices. You see the silicon valley as the most expensive region behind the orange county region Los Angeles. Based off looking at the data, the charts show a consitent upward trend of prices in California.</article>
+		<h4>Description of Interactive Visual:</h4>
+		<article> This bubble chart represents the housing markets of the 5 top selling houses in California. The charts rank which city has the highest and displays the size based on the year of the housing information. You can slide through the years to get a visual of which cities were the most expensive to live in. As above it was stated of the housing crash which shows a drop in prices. You see the silicon valley as the most expensive region behind the orange county region Los Angeles. Based off looking at the data, the charts show a consitent upward trend of prices in California.</article>
+
+		<hr />
 	</section>
 
-	<a href="../../index.html" style="background-color: lightgrey; padding: 5px; border: 1px solid black; border-radius: 20%; box-shadow: 3px 10px 5px rgb(0,0,0,.5);"><i class="fa fa-angle-double-left" style="font-size:24px"></i></a>
+	<a id="back" href="../../index.html"><i class="fa fa-angle-double-left" style="font-size:24px"></i></a>
 
 </body>
 </html>

@@ -55,16 +55,16 @@
 	<h3>Interactive Bubble chart of the top 5 expensive cities.</h3>
 	<div class="container">
 		<div class="chart">
-			<div id="observablehq-viewof-slider-a9e84cbe"></div>
-			<div id="observablehq-chart-a9e84cbe"></div>
+			<div id="observablehq-viewof-slider-e43615e5"></div>
+			<div id="observablehq-chart-e43615e5"></div>
 			<p>Credit: <a href="https://observablehq.com/@8382af20acb6450b/bubble-chart-of-housing-prices">Bubble chart of Housing prices by Anthony T</a></p>
 
 			<script type="module">
 				import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 				import define from "https://api.observablehq.com/@8382af20acb6450b/bubble-chart-of-housing-prices.js?v=3";
 				new Runtime().module(define, name => {
-				  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-a9e84cbe"));
-				  if (name === "viewof slider") return new Inspector(document.querySelector("#observablehq-viewof-slider-a9e84cbe"));
+				  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-e43615e5"));
+				  if (name === "viewof slider") return new Inspector(document.querySelector("#observablehq-viewof-slider-e43615e5"));
 				  return ["filter"].includes(name);
 				});
 			</script>
@@ -78,6 +78,5 @@
 	</section>
 
 	<a id="back" href="../../index.html"><i class="fa fa-angle-double-left" style="font-size:24px"></i></a>
-
 </body>
 </html>

@@ -13,12 +13,14 @@
   window.addEventListener("click", init);
   /**
    * TODO: Write a function comment using JSDoc.
+   *
+   * Need to pass the newText back to the result text field
    */
   function init() {
     // Note: In this function, we usually want to set up our event handlers
     // for UI elements on the page.
     document.getElementById("encrypt-it").addEventListener("click", function() {
-      document.getElementById("input-text").innerHTML = "Hello World";
+      document.getElementById("input-text").innerHTML = getText();
     });
   }
 
@@ -26,7 +28,9 @@
     
     var text = document.getElementById("input-text");
     alert("Encrypting: " + text.value);
-    encrypt(text.value);
+    var encryption = encrypt(text.value);
+
+    document.getElementById("result").innerHTML = encryption;
   }
 
   function encrypt(text) {
@@ -36,7 +40,7 @@
     var nextCharacter;
     console.log(lowerCase.toString() + "_" + upperCase.toString());
     
-    for(var i = 0; i < text.length(); i++) {
+    for(var i = 0; i < text.length; i++) {
 
       nextCharacter = String.fromCharCode(text.charCodeAt(i)+1);
 
@@ -51,6 +55,8 @@
       newText = newText + nextCharacter;
       console.log(newText);
     }
+
+    return newText;
   }
   // Add any other functions in this area (you should not implement your
   // entire program in the init function, for similar reasons that

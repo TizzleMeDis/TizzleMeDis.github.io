@@ -15,14 +15,15 @@ a {
 .calculator-grid {
 
 	display: grid;
-	grid-template-columns: repeat(4, 100px);
-	grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+	grid-template-columns: repeat(4, 80px);
+	grid-template-rows: minmax(100px, auto) repeat(5, 100px);
 
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 
 	margin: 0px;
+
 }
 
 .calculator-grid > div{
@@ -31,9 +32,10 @@ a {
 	display: block-flex;
 
 	text-align: right;
+	margin-top: 5em;
 	padding-top:10px;
 
-	width: 397px;
+	width: 315px;
 	height: 100px;
 }
 

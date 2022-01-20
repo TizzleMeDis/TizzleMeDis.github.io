@@ -1,3 +1,11 @@
+const equation = [];
+const numberButtons = document.querySelectorAll('[data-number]');
+const operationButtons = document.querySelectorAll('[data-operation]');
+const equalsButton = document.querySelector('[data-equals]');
+const clearButton = document.querySelector('[data-clear]');
+const previousOperandTextElement = document.querySelector('[data-previous-operand]');
+const currentOperandTextElement = document.querySelector('[data-current-operand]');
+
 class Calculator {
 
 	constructor(previousOperandTextElement, currentOperandTextElement) {
@@ -7,8 +15,8 @@ class Calculator {
 	}
 
 	clear() {
-		this.currentOperand = ''
-		this.previousOperand = ''
+		this.currentOperandTextElement = ''
+		this.previousOperandTextElement = ''
 		this.operation = undefined
 	}
 
@@ -17,7 +25,7 @@ class Calculator {
 	}
 
 	appendNumber(number) {
-		this.currentOperand = number
+		this.currentOperandTextElement += number;
 	}
 
 	chooseOperation(operation) {
@@ -33,25 +41,24 @@ class Calculator {
 
 	}
 }
-const equation = [];
-
-function getEquation(press) {
-	equation.push();
-}
-
-const numberButtons = document.querySelectorAll('[data-number]');
-const operationButtons = document.querySelector('[data-operation]');
-const equalsButton = document.querySelector('[data-equals]');
-const clearButton = document.querySelector('[data-clear]');
-const previousOperandTextElement = document.querySelector('[data-previous-operand]');
-const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
 
 numberButtons.forEach(button => {
 	button.addEventListener('click', () => {
-		console.log("clicked");
+		console.log("clicked number: ");
 		calculator.appendNumber(button.innerText)
 		calculator.updateDisplay();
+	});
+});
+
+operationButtons.forEach(button => {
+	button.addEventListener('click', () => {
+		console.log("clicked operation: ");
+		
 	})
-})
+});
+
+function getEquation(press) {
+	equation.push();
+}

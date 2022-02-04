@@ -12,15 +12,18 @@ a {
 }
 
 .calculator-grid {
-
 	padding: 5%;
 	background-color: rgb(150,150,150, 0.5);
+	display: grid;
+	grid-template-columns: repeat(4, 80px);
+	grid-template-rows: minmax(100px, auto) repeat(5, 100px);
 
 	display: flex;
 	flex-direction: column;
 
 	width: 400px;
 	height: 500px;
+	margin: 0px;
 }
 
 .answer {
@@ -37,6 +40,13 @@ a {
 	display: grid;
 	grid-template-columns: repeat(4, 100px);
 	grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+
+	text-align: right;
+	margin-top: 5em;
+	padding-top:10px;
+
+	width: 315px;
+	height: 100px;
 }
 
 .previous-operand {

@@ -2,6 +2,14 @@ window.addEventListener('load', function () {
   init();
 });
 
+const equation = [];
+const numberButtons = document.querySelectorAll('[data-number]');
+const operationButtons = document.querySelectorAll('[data-operation]');
+const equalsButton = document.querySelector('[data-equals]');
+const clearButton = document.querySelector('[data-clear]');
+const previousOperandTextElement = document.querySelector('[data-previous-operand]');
+const currentOperandTextElement = document.querySelector('[data-current-operand]');
+
 class Calculator {
 
 	constructor(previousOperandTextElement, currentOperandTextElement) {
@@ -13,7 +21,10 @@ class Calculator {
 	clear() {
 		this.currentOperandTextElement.innerHTML = '';
 		this.previousOperandTextElement.innerHTML = '';
-		this.operation = undefined
+
+		this.currentOperandTextElement = '';
+		this.previousOperandTextElement = '';
+		this.operation = undefined;
 	}
 
 	appendNumber(number) {
@@ -23,6 +34,7 @@ class Calculator {
 		} else {
 			this.currentOperandTextElement.innerHTML += number;
 		}
+		this.currentOperandTextElement += number;
 	}
 
 	chooseOperation(operation) {
@@ -42,7 +54,6 @@ class Calculator {
 		this.currentOperandTextElement.innerHTML = this.currentOperandTextElement.innerHTML;
 	}
 }
-
 
 const equation = [];
 
@@ -135,4 +146,24 @@ function init() {
 		console.log("compute");
 		calculator.compute(flag);
 	});
-}
+
+	const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
+
+	numberButtons.forEach(button => {
+		button.addEventListener('click', () => {
+			console.log("clicked number: ");
+			calculator.appendNumber(button.innerText)
+			calculator.updateDisplay();
+		});
+	});
+
+	operationButtons.forEach(button => {
+		button.addEventListener('click', () => {
+			console.log("clicked operation: ");
+			
+		})
+	});
+
+	function getEquation(press) {
+		equation.push();
+	}

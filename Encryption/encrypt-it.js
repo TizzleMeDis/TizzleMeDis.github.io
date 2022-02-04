@@ -30,21 +30,35 @@
 
     var cipher = document.getElementById("cipher-type");
     var font = document.querySelectorAll("input[name=text-size]");
-    var caps = document.querySelectorAll("input[name=uppercase-output]");
+    var caps = document.querySelector("input[name=uppercase-output]");
     var encryptButton = document.getElementById("encrypt-it");
     var resetButton = document.getElementById("reset");
 
 //------------------- Cipher Type: ----------------------------------
 
-    cipher.addEventListener("click", function() {
+ for (let i = 0; i < caps.length; i++) {
+     caps[i].addEventListener("click", function() {
+       caps[i].classList.toggle("red");
+     });
+ }
 
+    cipher.addEventListener("click", function() {
+      console.log("which encryption type?");
     });
 
 //-------------------- Font Size/All-Caps: -----------------------------------
-    //var inputs = document.getElementsByTagName("input");
-    //inputs.addEventListener("change", function() {
-    //  changeFont(smallFont.checked, largeFont.checked, caps.checked);
-    //});
+  
+  caps.addEventListener("click", function() {
+    console.log("boolean value: " + caps.checked);
+  });  
+
+  /*console.log("cap nodes: " + caps.length);
+  for (let i = 0; i < caps.length; i++) {
+    caps[i].addEventListener("click", function() {
+      console.log(i + ": caps on or off?");
+      console.log("caps value: " + caps[i].checked);
+    });
+  }*/
 
 //--------------------- Buttons ------------------------------------
 
@@ -59,6 +73,7 @@
       }
 
       encryptionText = getText(textArea);
+
       if(caps[0].checked) {
         result.innerHTML = encryptionText.toUpperCase();
       }
@@ -82,6 +97,11 @@
 
   function encryptRandom(text) {
 
+    if(text == null || text == "") {
+      return
+    }
+
+
   }
 
   function encryptShift(text) {
@@ -100,8 +120,6 @@
     var newText = "";
     var nextCharacter;
     
-    console.log("Text: " + text);
-
 /*
             Ascii chart
    ascii space = 32
@@ -112,7 +130,6 @@
     for(var i = 0; i < text.length; i++) {
 
       nextCharacter = String.fromCharCode(text.charCodeAt(i));
-      console.log("Start of loop: " + text.charCodeAt(i));
 
       //------------------- Shift Cipher --------------------
       if((text.charCodeAt(i) % 65) <= 25) {
@@ -121,10 +138,8 @@
 
         if(text.charCodeAt(i) > 87) {
           nextCharacter = String.fromCharCode(text.charCodeAt(i)-23);
-          console.log("Next Character calculation: " + text.charCodeAt(i) + " - 23 = " + nextCharacter.charCodeAt(i));
         } else {
           nextCharacter = String.fromCharCode(text.charCodeAt(i)+3);
-          console.log("Next Character calculation: " + text.charCodeAt(i) + " + 3 = " + nextCharacter.charCodeAt(i));
         }
 
       } else if((text.charCodeAt(i) % 97) <= 25) {
@@ -134,15 +149,12 @@
 
         if(text.charCodeAt(i) > 119) {
           nextCharacter = String.fromCharCode(text.charCodeAt(i)-23);
-          console.log("Next Character calculation: " + text.charCodeAt(i) + " - 23 = " + nextCharacter.charCodeAt(i));
         } else {
           nextCharacter = String.fromCharCode(text.charCodeAt(i)+3);
-          console.log("Next Character calculation: " + text.charCodeAt(i) + " + 3 = " + nextCharacter.charCodeAt(i));
         }      
       }
       
       newText = newText + nextCharacter;
-      console.log("result: " + newText);
     }
     //-----------------------------------------------------------
     return newText;

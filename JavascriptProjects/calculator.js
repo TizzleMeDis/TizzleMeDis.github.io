@@ -1,14 +1,6 @@
-window.addEventListener('load', function () {
-  init();
-});
-
-const equation = [];
-const numberButtons = document.querySelectorAll('[data-number]');
-const operationButtons = document.querySelectorAll('[data-operation]');
-const equalsButton = document.querySelector('[data-equals]');
-const clearButton = document.querySelector('[data-clear]');
-const previousOperandTextElement = document.querySelector('[data-previous-operand]');
-const currentOperandTextElement = document.querySelector('[data-current-operand]');
+window.onload = function() {
+	init();
+}
 
 class Calculator {
 
@@ -21,20 +13,15 @@ class Calculator {
 	clear() {
 		this.currentOperandTextElement.innerHTML = '';
 		this.previousOperandTextElement.innerHTML = '';
-
-		this.currentOperandTextElement = '';
-		this.previousOperandTextElement = '';
-		this.operation = undefined;
 	}
 
 	appendNumber(number) {
 
 		if(this.currentOperandTextElement.innerHTML == null) {
-			this.currentOperandTextElement.innerHTML = number;
+			this.currentOperandTextElement.innerText = number;
 		} else {
-			this.currentOperandTextElement.innerHTML += number;
+			this.currentOperandTextElement.innerText += number;
 		}
-		this.currentOperandTextElement += number;
 	}
 
 	chooseOperation(operation) {
@@ -69,8 +56,6 @@ function answer(equation) {
 	mathEquation.push(equation.substring(0, equation.indexOf(" ")));
 	equation = equation.slice(equation.indexOf(" ") + 1, equation.length);
 	mathEquation.push(equation.substring(0, equation.indexOf(" ")));
-
-	console.log(mathEquation.toString());
 
 	operand1 = parseInt(mathEquation[0]);
 	operation = mathEquation[1];
@@ -115,9 +100,7 @@ function init() {
 	const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
 
 	numberButtons.forEach(button => {
-		button.addEventListener('click', () => {
-			console.log("clicked number");
-			
+		button.addEventListener('click', () => {			
 			calculated(flag, calculator);
 			flag = false;
 			calculator.appendNumber(button.innerText);
@@ -127,8 +110,6 @@ function init() {
 
 	operationButtons.forEach(button => {
 		button.addEventListener('click', () => {
-			console.log("clicked operation");
-
 			calculated(flag, calculator);
 			flag = false;
 			calculator.chooseOperation(button.innerText);
@@ -137,33 +118,11 @@ function init() {
 	});
 	
 	clearButton.addEventListener('click', () => {
-		console.log("clear");
 		calculator.clear();
 	});
 
 	equalsButton.addEventListener('click', () => {
 		flag  = true;
-		console.log("compute");
 		calculator.compute(flag);
 	});
-
-	const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
-
-	numberButtons.forEach(button => {
-		button.addEventListener('click', () => {
-			console.log("clicked number: ");
-			calculator.appendNumber(button.innerText)
-			calculator.updateDisplay();
-		});
-	});
-
-	operationButtons.forEach(button => {
-		button.addEventListener('click', () => {
-			console.log("clicked operation: ");
-			
-		})
-	});
-
-	function getEquation(press) {
-		equation.push();
-	}
+}

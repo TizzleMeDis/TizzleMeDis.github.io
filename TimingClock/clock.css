@@ -82,3 +82,7 @@ body {
   margin: auto;
   z-index: 1;
 }
+
+footer {
+  padding: 20px;
+}

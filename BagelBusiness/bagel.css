@@ -1,0 +1,85 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	/*background-color: rgb(77, 0, 0, 0.7);*/
+	color: white;
+	background-image: linear-gradient(rgb(77, 0, 0, 0.7), rgb(77, 0, 0, 1));
+
+}
+
+nav{
+	padding: 1em;
+	background-color: rgb(0, 0, 0, 0.5);
+}
+
+nav a{
+	margin: 5px;
+
+}
+
+header{
+	width: 95%;
+	margin: 2%;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+	border: 1px solid #ddd;
+  	border-radius: 4px;
+  	padding: 5px;
+}
+main{
+	margin: 2%;
+}
+
+h1{
+	padding: 1.5em;
+}
+
+main h4 {
+	padding: 1em;
+	border: 2px outset white;
+	border-radius: 10%; 
+	border-width: auto;
+}
+
+ul {
+	padding: 1em;
+	border: 2px outset white;
+	border-radius: 5%; 
+	border-width: auto;
+  margin: 0;
+}
+ul.dash {
+  list-style-type: none;
+}
+ul.dash > li {
+  text-indent: -5px;
+}
+ul.dash > li:before {
+  content: "-";
+  text-indent: -5px;
+}
+
+footer {
+	background-color: rgb(0, 0, 0, 0.5);
+	padding: 2em;
+	display: flex;
+	flex-direction: row;
+
+	align-content: center;
+	justify-content: space-around;
+}
+
+.footer-text {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+}
+
+.qr-code {
+      max-width: 200px;
+      margin: 10px;
+}

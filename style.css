@@ -66,6 +66,24 @@ footer{
 	padding-bottom: 2em;
 }
 
+
+#projects {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}
+.scripts {
+	padding: 3em;
+	margin: 1em;
+	background-color: lightgrey;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
 @keyframes bold_tab {
 	from {background-color: rgb(255,255,255);}
 	to {background-color: rgba(0,0,0,0.4);}

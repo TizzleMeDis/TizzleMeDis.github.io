@@ -15,23 +15,27 @@
 </head>
 <body>
 	<nav></nav>
-	<header>
-		<h2>Typing Test</h2>
-		<h3>To begin start typing.</h3>
-	</header>
-
-	<div>
-		<!-- This will be the text box to copy -->
-		<textarea disabled>test</textarea>
-	</div>
-	<div>
-		<!-- This is the input typing box -->
-		<input type="text-box" name="input-container">
-	</div>
-
 	<div class="container">
-		<!-- This will be the keyboard -->
-		<iframe src="Keyboard.html"></iframe>
+
+		<header>
+			<h2>Typing Test</h2>
+			<h3>To begin start typing.</h3>
+		</header>
+
+		<div>
+			<!-- This will be the text box to copy -->
+			<div id="story" class="text"></div>
+		</div>
+		<div>
+			<!-- This is the input typing box -->
+			<div id="input" class="text"></div>
+		</div>
+
+		<div class="container">
+			<!-- This will be the keyboard -->
+			<iframe src="Keyboard.html"></iframe>
+		</div>
 	</div>
+	<script type="text/javascript" src="TypingSpeed.js"></script>
 </body>
 </html>

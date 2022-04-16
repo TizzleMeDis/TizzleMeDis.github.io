@@ -1,0 +1,65 @@
+#keyboard-container {
+
+	border: 1px solid black;
+	border-radius: 2%;
+	padding: 10px;
+
+	background-color: rgb(130,130,130,.50);
+	width: auto;
+}
+
+.row {
+	display: flex;
+	justify-content: space-around;
+}
+
+div[key] {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: white;
+	background-color: rgb(0,0,0);
+
+	border: 2px solid black;
+	border-radius: 3%;
+
+	padding: 5px;
+	margin: 2px;
+	min-width: 5%;
+}
+
+div[two-keys] {
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+div[space-bar] { width: 100%; }
+div[tab] { width: 10%; }
+div[caps] { width: 15%; }
+div[enter] { width: 15%; }
+div[shift] { width: 15%; }
+div[ctrl] { width: 10%; }
+div[win] { width: 10%; }
+div[alt] { width: 10%; }
+div[backspace] { width: 12%; }
+
+div[class='active'] {
+	background-color: white;
+	color: black;
+}
+
+input {
+	margin: 1em;
+	padding: 10px;
+	width: 100%;
+
+	border: none;
+	outline: none;
+	border-radius: 3%;
+	background-color: lightgrey;
+}

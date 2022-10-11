@@ -1,7 +1,13 @@
+:root {
+	--calculator-width: 320px;
+	--calculator-height:  400px;
+	--key-height: 80px;
+	--key-width: 80px;
+}
+
 body{
 	padding: 0;
 	margin: 0;
-	margin: auto;
 	background: linear-gradient(to top right, rgb(0, 255, 153) 0%, rgb(0, 255, 255) 100%);
 }
 
@@ -13,7 +19,7 @@ a {
 }
 
 .container {
-	padding: 4em;
+	padding: 2em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -21,19 +27,19 @@ a {
 
 .calculator-grid {
 
-	padding: 5em;
-	background-color: rgb(150,150,150, 0.5);
+	padding: 1em;
+	background-color: rgb(150,150,150, 0.3);
 	
 
-	width: 400px;
-	height: 500px;
+	width: var(--calculator-width);
+	height: var(--calculator-height);
 	margin: 0px;
 }
 
 .answer {
 	background-color: white;
 	border: 2px solid black;
-	min-height: 100px;
+	min-height: 80px;
 }
 
 .answer > div {
@@ -42,29 +48,29 @@ a {
 
 .keys{
 	display: grid;
-	grid-template-columns: repeat(4, 100px);
-	grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+	grid-template-columns: repeat(4, var(--key-width));
+	grid-template-rows: minmax(var(--key-height), auto) repeat(3, var(--key-height));
 
 	text-align: right;
 
-	width: 315px;
-	height: 100px;
+	width: var(--calculator-width);
+	height: 320px;
 }
 
 .previous-operand {
-	font-size: 1.3em;
+	font-size: 1.2em;
 	color: rgb(0,0,0, 0.5); 
 }
 
 .current-operand {
-	font-size: 2em;
+	font-size: 1.7em;
 	color: rgb(0,0,0); 
 }
 
 .keys > button {
 	cursor: pointer;
-	font-size: 2em;
-	border: 2px solid black;
+	font-size: 1.5em;
+	border: 1px solid black;
 
 }
 

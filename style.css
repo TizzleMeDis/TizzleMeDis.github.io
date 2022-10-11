@@ -7,34 +7,11 @@ body{
 h1{
 	color: rgb(0, 250, 250);
 }
+
 .navbar-item {
 	color: white;
 	padding: 1em;
 }
-
-/*#menu-bar {
-	margin: 0em;
-	padding: 0.75em;
-	width: 100%;
-	height: 2.0em;
- 	background-color: rgb(0,0,0,0.5); 
-	box-shadow: 0px 5px 5px rgb(100,100,100);
-}
-
-#header-link {
-	color: white;
-	margin: 0px;
-	padding: 1em;
-	font-size: 1em;
-	float: right;
-}
-
-#header-link:hover {
-	animation-name: tooltip;
-	animation-duration: 3s;
-
-	background-color: rgb(255, 255, 255, 0.3);
-}*/
 
 .center {
 	text-align:center;
@@ -55,6 +32,7 @@ h1{
 	background-color: rgba(0,0,0,0.4);
 	border-radius: 10%;
 	opacity: .6;
+	font-size: 1.1em;
 
 	animation-name: bold_tab;
 	animation-duration: 0.5s;
@@ -73,6 +51,7 @@ footer{
 	justify-content: space-around;
 
 }
+
 .scripts {
 	padding: 3em;
 	margin: 1em;
@@ -84,7 +63,35 @@ footer{
 	flex-direction: column;
 }
 
+.scripts:hover {
+		padding: 3.1em;
+		margin:  1.1em;
+		background-color: rgb(192,192,192);
+
+		animation-name: bold_project;
+		animation-duration: 0.5s;
+}
+
+@keyframes bold_project {
+	from{
+		padding: 3em;
+		margin:  1em;
+		background-color: rgb(211,211,211);
+	}
+	to {
+		padding: 3.1em;
+		margin:  1.1em;
+		background-color: rgb(192,192,192);
+	}
+}
+
 @keyframes bold_tab {
-	from {background-color: rgb(255,255,255);}
-	to {background-color: rgba(0,0,0,0.4);}
+	from {
+		background-color: rgb(255,255,255);
+		font-size: 1em;
+	}
+	to {
+		background-color: rgba(0,0,0,0.4);
+		font-size: 1.1em;
+	}
 }

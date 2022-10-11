@@ -4,6 +4,7 @@ const entryBox = document.getElementById("input");
 const submitBtn = document.getElementById("submit");
 const list = document.getElementById("list");
 
+
 var queryItem = document.querySelectorAll("li");
 var deletebtn = document.querySelectorAll("input[delete]");
 var slashbtn = document.querySelectorAll("input[slash]");

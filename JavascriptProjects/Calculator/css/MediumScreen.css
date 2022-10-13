@@ -1,8 +1,7 @@
 :root {
-	--calculator-width: 320px;
-	--calculator-height:  400px;
-
-	--key-dimension: 80px;
+	--calculator-width: 360px;
+	--calculator-height:  450px;
+	--key-dimension: 90px;
 }
 
 body{
@@ -21,7 +20,7 @@ a {
 }
 
 .container {
-	padding: 2em;
+	padding: 3em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -29,8 +28,8 @@ a {
 
 .calculator-grid {
 
-	padding: 1em;
-	background-color: rgb(150,150,150, 0.3);
+	padding: 2.5em;
+	background-color: rgb(150,150,150, 0.4);
 	
 
 	width: var(--calculator-width);
@@ -41,11 +40,11 @@ a {
 .answer {
 	background-color: white;
 	border: 2px solid black;
-	min-height: 80px;
+	min-height: var(--key-dimension);
 }
 
 .answer > div {
-	padding:6px;
+	padding:8px;
 }
 
 .keys{
@@ -60,12 +59,12 @@ a {
 }
 
 .previous-operand {
-	font-size: 1.2em;
+	font-size: 1.3em;
 	color: rgb(0,0,0, 0.5); 
 }
 
 .current-operand {
-	font-size: 1.7em;
+	font-size: 1.85em;
 	color: rgb(0,0,0); 
 }
 

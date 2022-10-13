@@ -1,8 +1,7 @@
 :root {
-	--calculator-width: 320px;
-	--calculator-height:  400px;
-
-	--key-dimension: 80px;
+	--calculator-width: 400px;
+	--calculator-height:  500px;
+	--key-dimension: 100px;
 }
 
 body{
@@ -21,7 +20,7 @@ a {
 }
 
 .container {
-	padding: 2em;
+	padding: 4em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -29,8 +28,8 @@ a {
 
 .calculator-grid {
 
-	padding: 1em;
-	background-color: rgb(150,150,150, 0.3);
+	padding: 3em;
+	background-color: rgb(150,150,150, 0.5);
 	
 
 	width: var(--calculator-width);
@@ -41,11 +40,11 @@ a {
 .answer {
 	background-color: white;
 	border: 2px solid black;
-	min-height: 80px;
+	min-height: var(--key-dimension);
 }
 
 .answer > div {
-	padding:6px;
+	padding:10px;
 }
 
 .keys{
@@ -60,21 +59,22 @@ a {
 }
 
 .previous-operand {
-	font-size: 1.2em;
+	font-size: 1.3em;
 	color: rgb(0,0,0, 0.5); 
 }
 
 .current-operand {
-	font-size: 1.7em;
+	font-size: 2em;
 	color: rgb(0,0,0); 
 }
 
 .keys > button {
 	cursor: pointer;
-	font-size: 1.5em;
-	border: 1px solid black;
-
+	font-size: 2em;
+	border: 2px solid black;
 }
+
+
 
 button {
 	border-radius: 3%;

@@ -52,6 +52,9 @@ h3 {
 	float: right;
 }
 
+.display-container {
+	display: none;
+}
 
 @keyframes listHover {
 	from { background-color: rgb(255, 195, 77);}
@@ -61,6 +64,7 @@ h3 {
 li {
 	padding: 10px;
 	background-color: rgb(255, 195, 77, 0.5); 
+	display: flex;
 }
 
 li:hover {
@@ -77,4 +81,11 @@ li > p {
 
 li > input {
 	margin: 10px 5px 10px 5px;
+}
+
+/*elements that the javascript creates*/
+
+
+span {
+	font-size: 24px;
 }

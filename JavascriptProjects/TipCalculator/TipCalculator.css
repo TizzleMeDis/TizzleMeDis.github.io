@@ -1,0 +1,57 @@
+body{
+	background-color: rgb(255, 255, 255);
+}
+
+.container{
+	text-align: center;
+	background-color: rgb(100, 100, 100, 0.5);
+	padding: 5%;
+	border-radius: 5%;
+	margin: 5px;
+
+}
+
+.container-content {
+	display: flex;
+	align-items: center;
+
+	flex-direction: row;
+	padding: 5%;
+}
+
+.container-input {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: 1.2em;
+	margin: 0;
+}
+
+.container-output {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+	margin: 5px;
+}
+
+.billing{
+	display: flex;
+	flex-direction: column;
+	padding: 5%;
+	border-radius: 5%;
+	margin: 5px;
+}
+
+.total {
+	display: flex;
+	flex-direction: column;
+}
+
+output {
+	background-color: white;
+	border: solid black 2px;
+	margin: 5px;
+	padding: 1em;
+	width: 2em;
+}

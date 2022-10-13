@@ -72,7 +72,6 @@ function answer(equation) {
 	}
 
 	mathEquation.splice(0, mathEquation.length);
-	console.log("answer: " + answer)
 
 	return "" + answer;
 }
@@ -110,10 +109,11 @@ function init() {
 
 	operationButtons.forEach(button => {
 		button.addEventListener('click', () => {
-			calculated(flag, calculator);
-			flag = false;
-			calculator.chooseOperation(button.innerText);
-			calculator.updateDisplay();
+			if(currentOperandTextElement.value != " "){
+				flag = false;
+				calculator.chooseOperation(button.innerText);
+				calculator.updateDisplay();
+			}
 		})
 	});
 	
@@ -125,4 +125,13 @@ function init() {
 		flag  = true;
 		calculator.compute(flag);
 	});
+}
+
+function keypadAnimation(key) {
+	let color = new Map();
+
+	color.set();
+	color.set();
+	color.set();
+	color.set();
 }

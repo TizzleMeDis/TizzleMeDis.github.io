@@ -2,38 +2,49 @@
 <html>
 <head>
 	<title>Tip Calculator</title>
+	<link rel="stylesheet" type="text/css" href="TipCalculator.css">
 </head>
 <body>
 	<nav></nav>
-	<header><h2>Tip Calculator</h2></header>
-	<div class="billing">
-		<article>Here you can calculate the tip based off performace.
-		If you feel they done a good service then choose a percantage better than average.
-		There is also a portion to control how much you want to tip.
-		This is based off of the percentage you choose.</article>
 
-		<br />
-		<input type="text" name="billing" placeholder="Bill amount">
-		<input type="button" name="calculate" value="calculate">
+		
+	<div class="container">
+		<header><h2>Tip Calculator</h2></header><hr>
+		<div class="container-content">
+			<div class="billing">
 
-	</div>
+				<div class="container-input">
+					<label>Bill:</label>
+					<input id="bill-amount" type="text">
+					<label>$</label>
+				</div>
 
-	<div class="percentage">
-		<label>Percentage: </label>
-		<input type="text" name="percentage" placeholder="%percentage%">
+				<div class="container-input">
+					<label>Percentage: </label>
+					<input id="percentage" type="text" placeholder="15">
+					<label>%</label>
+				</div>
+				<br>
+				<button id="calculate" value="calculate">Calculate</button>
 
-		<hr>
+			</div>
 
-		<div>
-			<button>10%</button>
-			<button>15%</button>
-			<button>25%</button>
+			<div class="total">
+				<div class="container-output">
+					<label>Tip:</label>
+					<output id="tip-amount">00.00</output>
+					<label>$</label>
+				</div>
+				<div class="container-output">
+					<label>Total:</label> 
+					<output id="total-bill">00.00</output>
+					<label>$</label>
+				</div>
+			</div>
 		</div>
 	</div>
-	
-	<div class="total">
-		<
-	</div>
+
+	<script src="TipCalculator.js"></script>
 
 </body>
 </html>

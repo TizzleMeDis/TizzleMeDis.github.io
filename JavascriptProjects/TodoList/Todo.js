@@ -3,7 +3,7 @@ alert("Click once to cross. \nClick twice to delete.");
 const entryBox = document.getElementById("input");
 const submitBtn = document.getElementById("submit");
 const list = document.getElementById("list");
-
+const container = document.querySelector("div[class='display-container']");
 
 var queryItem = document.querySelectorAll("li");
 var deletebtn = document.querySelectorAll("input[delete]");
@@ -14,9 +14,14 @@ submitBtn.addEventListener('click', () => {
 	if(entryBox.value != "") {
 		const newEntry = document.createElement("li");
 		newEntry.style.display = "flex";
-		newEntry.innerHTML = "<p>" + entryBox.value + "</p>";
+		newEntry.innerHTML = 
+		"<div class='list-item'>" + "<div class='text-content'><p>" + entryBox.value + "</p></div>" + 
+		"<div class='check'><span class='glyphicon glyphicon-ok-circle'></span></div>" +
+		"<div class='delete'><span class='glyphicon glyphicon-remove-circle'></span></div></div>";
+
 		list.appendChild(newEntry);
 		entryBox.value = "";
+		container.style.display = "initial";
 	}
 });
 
@@ -29,6 +34,12 @@ list.addEventListener('click', () => {
 
     	item.addEventListener('dblclick', () => {
     		list.removeChild(item);
+			if(queryItem.length == null) {
+				container.style.display = "none";
+			} else {
+				container.style.display = "initial";
+			}
+
     	});
 	});
 });

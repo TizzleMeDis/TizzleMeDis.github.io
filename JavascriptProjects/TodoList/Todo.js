@@ -6,19 +6,23 @@ const list = document.getElementById("list");
 const container = document.querySelector("div[class='display-container']");
 
 var queryItem = document.querySelectorAll("li");
-var deletebtn = document.querySelectorAll("input[delete]");
-var slashbtn = document.querySelectorAll("input[slash]");
+var deletebtn = document.querySelectorAll("span[delete]");
+var slashbtn = document.querySelectorAll("span[check]");
 
 
 submitBtn.addEventListener('click', () => {
 	if(entryBox.value != "") {
 		const newEntry = document.createElement("li");
-		newEntry.style.display = "flex";
 		newEntry.innerHTML = 
-		"<div class='list-item'>" + "<div class='text-content'><p>" + entryBox.value + "</p></div>" + 
-		"<div class='check'><span class='glyphicon glyphicon-ok-circle'></span></div>" +
-		"<div class='delete'><span class='glyphicon glyphicon-remove-circle'></span></div></div>";
-
+		"<div class='list-item'>" + 
+			"<div class='text-content'>" + 
+				"<p>" + entryBox.value + "</p>" + 
+			"</div>" + 
+			"<div class='buttons'>" +
+				"<span class='glyphicon glyphicon-ok-circle' check></span>" +
+				"<span class='glyphicon glyphicon-remove-circle' delete></span>" +
+			"</div>" +
+		"</div>";
 		list.appendChild(newEntry);
 		entryBox.value = "";
 		container.style.display = "initial";
